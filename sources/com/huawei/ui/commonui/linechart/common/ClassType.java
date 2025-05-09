@@ -1,0 +1,34 @@
+package com.huawei.ui.commonui.linechart.common;
+
+/* loaded from: classes6.dex */
+public enum ClassType {
+    TYPE_NONE,
+    TYPE_STEP,
+    TYPE_CALORIES,
+    TYPE_DISTANCE,
+    TYPE_CLIMB,
+    TYPE_HEART_RATE,
+    TYPE_RUN,
+    TYPE_WALK,
+    TYPE_BIKE,
+    TYPE_STRENGTH_TIME,
+    TYPE_FITNESS,
+    TYPE_CORE_SLEEP,
+    TYPE_PRESSURE,
+    TYPE_WEIGHT,
+    TYPE_BLOOD_OXYGEN,
+    TYPE_SWIM,
+    TYPE_BASKETBALL,
+    TYPE_GOLF,
+    TYPE_CHANGEABLE,
+    TYPE_ALL_SPORT,
+    TYPE_BLOODSUGAR,
+    TYPE_TEMPERATURE,
+    TYPE_BLOOD_PRESSURE,
+    TYPE_RUNNING,
+    TYPE_VO2MAX,
+    TYPE_STATE,
+    TYPE_LACTATE_THRESHOLD,
+    TYPE_DIVING,
+    TYPE_ACTIVE_HOURS
+}

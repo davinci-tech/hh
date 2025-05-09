@@ -1,0 +1,10 @@
+package com.huawei.hms.iapfull;
+
+import com.huawei.hms.iapfull.bean.WebProductDetailResponse;
+
+/* loaded from: classes9.dex */
+public interface k1 {
+    void a(int i, String str);
+
+    void a(WebProductDetailResponse webProductDetailResponse);
+}

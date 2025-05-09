@@ -1,0 +1,22 @@
+package com.huawei.health.suggestion.videoplayer;
+
+/* loaded from: classes8.dex */
+public interface IngotsPlayerActionCallback {
+    public static final int ON_AUTO_COMPLETE = 6;
+    public static final int ON_CLICK_BLANK = 102;
+    public static final int ON_CLICK_PAUSE = 3;
+    public static final int ON_CLICK_RESUME = 4;
+    public static final int ON_CLICK_START_AUTO_COMPLETE = 2;
+    public static final int ON_CLICK_START_ERROR = 1;
+    public static final int ON_CLICK_START_ICON = 0;
+    public static final int ON_CLICK_START_THUMB = 101;
+    public static final int ON_ENTER_FULLSCREEN = 7;
+    public static final int ON_ENTER_TINY_SCREEN = 9;
+    public static final int ON_QUIT_FULLSCREEN = 8;
+    public static final int ON_QUIT_TINY_SCREEN = 10;
+    public static final int ON_SEEK_POSITION = 5;
+    public static final int ON_TOUCH_SCREEN_SEEK_POSITION = 12;
+    public static final int ON_TOUCH_SCREEN_SEEK_VOLUME = 11;
+
+    void onEvent(int i, String str, int i2, String str2);
+}

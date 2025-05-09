@@ -1,0 +1,38 @@
+package org.apache.commons.io;
+
+import java.io.IOException;
+import java.io.Serializable;
+
+/* loaded from: classes10.dex */
+public class TaggedIOException extends IOExceptionWithCause {
+    private static final long serialVersionUID = -6994123481142850163L;
+    private final Serializable tag;
+
+    public static boolean isTaggedWith(Throwable th, Object obj) {
+        return obj != null && (th instanceof TaggedIOException) && obj.equals(((TaggedIOException) th).tag);
+    }
+
+    public static void throwCauseIfTaggedWith(Throwable th, Object obj) throws IOException {
+        if (isTaggedWith(th, obj)) {
+            throw ((TaggedIOException) th).getCause();
+        }
+    }
+
+    public TaggedIOException(IOException iOException, Serializable serializable) {
+        super(iOException.getMessage(), iOException);
+        this.tag = serializable;
+    }
+
+    @Override // java.lang.Throwable
+    public IOException getCause() {
+        IOException iOException;
+        synchronized (this) {
+            iOException = (IOException) super.getCause();
+        }
+        return iOException;
+    }
+
+    public Serializable getTag() {
+        return this.tag;
+    }
+}

@@ -1,0 +1,31 @@
+package com.huawei.openalliance.ad;
+
+import com.google.flatbuffers.FlatBufferBuilder;
+import com.google.flatbuffers.Table;
+
+/* loaded from: classes5.dex */
+public final class vs extends Table {
+    public static void c(FlatBufferBuilder flatBufferBuilder, int i) {
+        flatBufferBuilder.addOffset(2, i, 0);
+    }
+
+    public static void b(FlatBufferBuilder flatBufferBuilder, int i) {
+        flatBufferBuilder.addInt(1, i, 0);
+    }
+
+    public static void a(FlatBufferBuilder flatBufferBuilder, int i) {
+        flatBufferBuilder.addInt(0, i, 0);
+    }
+
+    public static int a(FlatBufferBuilder flatBufferBuilder, int i, int i2, int i3) {
+        flatBufferBuilder.startTable(3);
+        c(flatBufferBuilder, i3);
+        b(flatBufferBuilder, i2);
+        a(flatBufferBuilder, i);
+        return a(flatBufferBuilder);
+    }
+
+    public static int a(FlatBufferBuilder flatBufferBuilder) {
+        return flatBufferBuilder.endTable();
+    }
+}

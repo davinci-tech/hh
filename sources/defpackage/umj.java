@@ -1,0 +1,50 @@
+package defpackage;
+
+import com.huawei.hms.network.embedded.r3;
+import kotlin.Metadata;
+import kotlinx.coroutines.Incomplete;
+import kotlinx.coroutines.JobNode;
+import kotlinx.coroutines.internal.LockFreeLinkedListNode;
+
+@Metadata(d1 = {"\u0000 \n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u000b\n\u0002\b\u0005\n\u0002\u0010\u000e\n\u0002\b\u0003\b\u0000\u0018\u00002\u00020\u00012\u00020\u0002B\u0005¢\u0006\u0002\u0010\u0003J\u000e\u0010\n\u001a\u00020\u000b2\u0006\u0010\f\u001a\u00020\u000bJ\b\u0010\r\u001a\u00020\u000bH\u0016R\u0014\u0010\u0004\u001a\u00020\u00058VX\u0096\u0004¢\u0006\u0006\u001a\u0004\b\u0004\u0010\u0006R\u0014\u0010\u0007\u001a\u00020\u00008VX\u0096\u0004¢\u0006\u0006\u001a\u0004\b\b\u0010\t¨\u0006\u000e"}, d2 = {"Lkotlinx/coroutines/NodeList;", "Lkotlinx/coroutines/internal/LockFreeLinkedListHead;", "Lkotlinx/coroutines/Incomplete;", "()V", r3.B, "", "()Z", "list", "getList", "()Lkotlinx/coroutines/NodeList;", "getString", "", "state", "toString", "kotlinx-coroutines-core"}, k = 1, mv = {1, 6, 0}, xi = 48)
+/* loaded from: classes.dex */
+public final class umj extends upj implements Incomplete {
+    @Override // kotlinx.coroutines.Incomplete
+    public umj getList() {
+        return this;
+    }
+
+    @Override // kotlinx.coroutines.Incomplete
+    /* renamed from: isActive */
+    public boolean getD() {
+        return true;
+    }
+
+    public final String a(String str) {
+        StringBuilder sb = new StringBuilder("List{");
+        sb.append(str);
+        sb.append("}[");
+        umj umjVar = this;
+        boolean z = true;
+        for (LockFreeLinkedListNode lockFreeLinkedListNode = (LockFreeLinkedListNode) umjVar.getNext(); !uhy.e(lockFreeLinkedListNode, umjVar); lockFreeLinkedListNode = lockFreeLinkedListNode.getNextNode()) {
+            if (lockFreeLinkedListNode instanceof JobNode) {
+                JobNode jobNode = (JobNode) lockFreeLinkedListNode;
+                if (z) {
+                    z = false;
+                } else {
+                    sb.append(", ");
+                }
+                sb.append(jobNode);
+            }
+        }
+        sb.append("]");
+        String sb2 = sb.toString();
+        uhy.a(sb2, "");
+        return sb2;
+    }
+
+    @Override // kotlinx.coroutines.internal.LockFreeLinkedListNode
+    public String toString() {
+        return ASSERTIONS_ENABLED.d() ? a("Active") : super.toString();
+    }
+}

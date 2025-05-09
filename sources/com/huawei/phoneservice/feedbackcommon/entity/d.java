@@ -1,0 +1,10 @@
+package com.huawei.phoneservice.feedbackcommon.entity;
+
+import com.google.gson.annotations.SerializedName;
+
+/* loaded from: classes5.dex */
+public class d {
+
+    @SerializedName("problemId")
+    public String d;
+}

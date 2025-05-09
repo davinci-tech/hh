@@ -1,0 +1,10 @@
+package com.huawei.ui.commonui.base;
+
+import androidx.lifecycle.ViewModel;
+
+/* loaded from: classes9.dex */
+public interface Bindable {
+    void bind(ViewModel viewModel);
+
+    void unbind();
+}
