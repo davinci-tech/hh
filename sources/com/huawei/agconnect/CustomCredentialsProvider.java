@@ -1,9 +1,0 @@
-package com.huawei.agconnect;
-
-import com.huawei.agconnect.core.service.auth.Token;
-import com.huawei.hmf.tasks.Task;
-
-/* loaded from: classes8.dex */
-public interface CustomCredentialsProvider {
-    Task<Token> getTokens(boolean z);
-}
